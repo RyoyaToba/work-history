@@ -10,20 +10,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-    - name: Install pandoc and LaTeX
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y pandoc texlive-xetex texlive-fonts-recommended texlive-latex-recommended
+      - name: Install pandoc and LaTeX
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc texlive-xetex texlive-fonts-recommended texlive-latex-recommended
 
-    - name: Generate PDF from Markdown
-      run: |
-        mkdir -p output
-        pandoc docs/index.md -o output/resume.pdf --pdf-engine=xelatex
+      - name: Generate PDF from Markdown
+        run: |
+          mkdir -p output
+          pandoc docs/index.md -o output/resume.pdf --pdf-engine=xelatex
 
-    - name: Upload PDF artifact
-      uses: actions/upload-artifact@v3
-      with:
-        name: resume-pdf
-        path: output/resume.pdf
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: resume-pdf
+          path: output/resume.pdf
