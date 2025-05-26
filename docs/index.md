@@ -1,20 +1,4 @@
-<style>
-body {
-  font-family: "Meiryo", "Helvetica Neue", sans-serif;
-  font-size: 11pt;
-  line-height: 1.5;
-  margin: 20px 30px; /* 余白を狭めつつ自然に */
-  padding: 0;
-}
-h1, h2, h3 {
-  font-weight: bold;
-  margin-top: 1.2em;
-  margin-bottom: 0.5em;
-}
-p {
-  margin: 0.5em 0;
-}
-</style>
+<link rel="stylesheet" href="./style.css">
 
 # 職務経歴書
 
