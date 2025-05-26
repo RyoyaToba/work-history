@@ -1,0 +1,29 @@
+{
+  "name": "work-history",
+  "version": "1.0.0",
+  "description": "このリポジトリでは、Markdown形式で職務経歴書を管理しています。",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "lint": "textlint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RyoyaToba/work-history.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RyoyaToba/work-history/issues"
+  },
+  "homepage": "https://github.com/RyoyaToba/work-history#readme",
+  "devDependencies": {
+    "@proofdict/textlint-rule-proofdict": "^3.1.2",
+    "markdownlint-cli": "^0.45.0",
+    "textlint": "^14.7.2",
+    "textlint-rule-ja-no-abusage": "^3.0.0"
+  }
+}

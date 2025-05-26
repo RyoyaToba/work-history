@@ -1,1 +1,15 @@
+# macOS固有ファイル
 .DS_Store
+
+# Node.js関連
+node_modules/
+package-lock.json
+
+# ローカルキャッシュ
+.cache/
+
+# VSCodeなどエディタ設定（必要に応じて）
+.vscode/
+
+# その他一時ファイル・ログ（プロジェクトによっては）
+*.log
