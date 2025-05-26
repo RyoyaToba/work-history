@@ -72,7 +72,13 @@
 
 <div style="page-break-before:always"></div>
 
-## 4. 職務経歴
+## 4. 資格
+
+- Oracle Certified Java Programmer, Gold SE 11
+- 高等学校教諭一種免許（理科）
+- 普通自動車第一種運転免許
+
+## 5. 職務経歴
 
 ### 株式会社ラクスパートナーズ（2022年4月～現在）
 
