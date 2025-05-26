@@ -1,36 +1,29 @@
-name: Generate PDF
+name: Build Resume PDF
 
 on:
   push:
-    branches:
-      - main
+    paths:
+      - 'docs/index.md'
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+    - uses: actions/checkout@v3
 
-      - name: Install pandoc and LaTeX
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y pandoc texlive-latex-base texlive-fonts-recommended texlive-latex-recommended
+    - name: Install pandoc and LaTeX
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y pandoc texlive-xetex texlive-fonts-recommended texlive-latex-recommended
 
-      - name: Generate PDF from index.md
-        run: |
-          mkdir -p output
-          pandoc docs/index.md -o output/resume.pdf --pdf-engine=xelatex
+    - name: Generate PDF from Markdown
+      run: |
+        mkdir -p output
+        pandoc docs/index.md -o output/resume.pdf --pdf-engine=xelatex
 
-      - name: Copy to docs directory
-        run: |
-          mv output/resume.pdf docs/resume.pdf
-
-      - name: Commit and push PDF
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add docs/resume.pdf
-          git commit -m "chore: update resume.pdf [auto-generated]" || echo "No changes to commit"
-          git push
+    - name: Upload PDF artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: resume-pdf
+        path: output/resume.pdf
