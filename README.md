@@ -7,4 +7,3 @@
 ## 構成
 
 - `docs/index.md` ... Web表示用の職務経歴書
-- `docs/resume.pdf` ... PDF形式のダウンロード版
